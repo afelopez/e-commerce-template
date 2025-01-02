@@ -1,8 +1,8 @@
+import { Layout } from '../../Components/Layout'
+
 function Home() {
     return(
-        <div className="py-20 mx-24 bg-cyan-500">
-            Home
-        </div>
+        <Layout children={ <h1> Home </h1> } />
     )
 }
 

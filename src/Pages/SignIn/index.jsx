@@ -1,8 +1,8 @@
+import { Layout } from '../../Components/Layout'
+
 function SignIn() {
     return(
-        <div className="SignIn">
-            SignIn
-        </div>
+        <Layout children={ <h1> Sign In </h1> } />
     )
 }
 

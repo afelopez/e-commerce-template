@@ -1,8 +1,8 @@
+import { Layout } from '../../Components/Layout'
+
 function NotFound() {
     return(
-        <div className="NotFound">
-            NotFound
-        </div>
+        <Layout children={ <h1> 404 Not Found </h1> } />
     )
 }
 

@@ -12,7 +12,7 @@ const NavItem = ({ to, children }) => {
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between  items-center fixed z-10 w-full py-5 px-8 text-sm font-light">
+        <nav className="flex justify-between  items-center fixed z-10 w-full py-5 top-0 px-8 text-sm font-light">
 			<ul className="flex items-center gap-3">
 				<li className="text-lg"> <Link to="/"> FuncionArte </Link> </li>
 				<li> <NavItem to="/clothes"> Clothes </NavItem> </li>

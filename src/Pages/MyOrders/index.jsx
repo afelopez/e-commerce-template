@@ -1,8 +1,8 @@
+import { Layout } from '../../Components/Layout'
+
 function MyOrders() {
     return(
-        <div className="MyOrders">
-            MyOrders
-        </div>
+        <Layout children={ <h1> My Orders </h1> } />
     )
 }
 
