@@ -1,6 +1,6 @@
 function Home() {
     return(
-        <div className="Home">
+        <div className="py-20 mx-24 bg-cyan-500">
             Home
         </div>
     )
