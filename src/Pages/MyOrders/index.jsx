@@ -6,4 +6,4 @@ function MyOrders() {
     )
 }
 
-export {MyOrders}
+export { MyOrders }
