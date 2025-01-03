@@ -1,18 +1,27 @@
+import { useState, useEffect } from "react"
 import { Layout } from "../../Components/Layout"
 import { Card } from "../../Components/Card"
 
 function Home() {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        fetch(import.meta.env.VITE_PLATZI_API_URL + '/products')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+    }, [])
+
+    console.log(products)
     return(
-        <Layout children={ 
-            <>  
-                <Card 
-                    title={"Card Title"}
-                    price={100} 
-                    tag={"description"}
-                    srcImage={"https://images.pexels.com/photos/29986994/pexels-photo-29986994/free-photo-of-intricate-blue-abstract-pattern-on-green-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
-                />
-            </>
-        } />
+        <Layout>
+            <div className="grid grid-cols-4 gap-10 w-full max-w-screen-lg">
+                {
+                    products?.filter(product => product.id < 80).map(product => (
+                        <Card key={ product.id } data = { product }/> 
+                    ))  
+                }
+            </div>
+        </Layout>
     )
 }
 

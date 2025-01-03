@@ -1,4 +1,4 @@
-const Card = ({ title, price, tag, srcImage }) => {
+const Card = ({ data }) => {
 
   const containerStyle = "bg-white cursor-pointer w-56 h-60 rounded-lg"
   const figureStyle = "relative mb-2 w-full h-4/5"
@@ -9,13 +9,14 @@ const Card = ({ title, price, tag, srcImage }) => {
   return (
     <div className= { containerStyle }>
         <figure className= { figureStyle }>   
-            <span className= { tagStyle }> { tag } </span>
-            <img className= { imgStyle } src= { srcImage } alt=""/>
+            <span className= { tagStyle }> { data.category.name } </span>
+            <img className= { imgStyle } src= {data.images[0].replace(/[[\]"]+/g, '')} alt=""/>
             <div className= { addStyle }> + </div>
         </figure>
         <p className="flex justify-between">
-            <span className="text-sm font-light"> { title } </span>
-            <span className="text-lg font-medium"> ${ price } </span>
+            <span className="text-sm font-light"> { data.title } </span>
+            <span className="text-lg font-medium"> ${ data.price } </span>
+            
         </p>
     </div>
   );
